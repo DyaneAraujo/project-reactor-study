@@ -1,7 +1,7 @@
 # Project Reactor Study
 Learning about reactive programming.
 
-<4>Reactive Streams</4>
+<h4>Reactive Streams</h4>
 
 Trabalhando com Reactive Streams que implementa 4 interfaces e quem está provendo essa implementações, precisa que o código seja:
 
@@ -17,7 +17,7 @@ Permite que você continue com a execução do seu programa na thread principal 
 
 Define como regular a transmissão de elementos de fluxo. Em outras palavras, controle quantos elementos o destinatário pode consumir.
 
-<5>Trabalha com emissão de eventos</5>
+<h5>Trabalha com Emissão de Eventos</h5>
 
 1. Publisher - Responsável por emitir os eventos. Ele somente emite se alguém dê Subscriber nele, e então é criado o Subscription após alguém dar o Subscriber. O Publisher chama o Subscriber pelo onNext e é executado até que algumas das chamadas seguintes são executadas, como por exemplo o Publisher enviar todos os objetos gerando Backpressure gerando o onComplete ou quando gera algum erro e é gerando OnError e tanto em um como no outro o Subscriber e Subscription são cancelados.
 
@@ -29,7 +29,7 @@ Define como regular a transmissão de elementos de fluxo. Em outras palavras, c
 
 Mono significa que você tem um objeto ou não tem nada, mono ou void.
 
-<5>Subscribing to Mono with Consumer and Error</5>
+<h5>Subscribing to Mono with Consumer and Error</h5>
 
 Consumer é possibilidade de executar uma ação no momento da Subscribe.
 
