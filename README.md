@@ -2,7 +2,7 @@
 Learning about reactive programming.
 
 * Reactive Streams
-
+<p>
 Trabalhando com Reactive Streams que implementa 4 interfaces e quem está provendo essa implementações, precisa que o código seja:
 
 1. Assíncrona - Asynchronous 
@@ -51,6 +51,6 @@ funções em lambdas
 
 Plano B para resume e return sobre erros
 
-
+</p>
 
 
