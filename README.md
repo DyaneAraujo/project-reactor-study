@@ -1,7 +1,7 @@
 # Project Reactor Study
 Learning about reactive programming.
 
-# Reactive Streams
+* Reactive Streams
 
 Trabalhando com Reactive Streams que implementa 4 interfaces e quem está provendo essa implementações, precisa que o código seja:
 
