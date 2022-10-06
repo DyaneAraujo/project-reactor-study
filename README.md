@@ -3,19 +3,19 @@ Learning about reactive programming.
 
 <h2>Reactive Streams</h2>
 
-Trabalhando com Reactive Streams que implementa 4 interfaces e quem está provendo essa implementações, precisa que o código seja:
+* Trabalhando com Reactive Streams que implementa 4 interfaces e quem está provendo essa implementações, precisa que o código seja:
 
 1. Assíncrona - Asynchronous 
 
-Permite que você continue com a execução do seu programa na thread principal enquanto uma tarefa de longa duração é executada na sua própria thread separadamente da thread principal.
+* Permite que você continue com a execução do seu programa na thread principal enquanto uma tarefa de longa duração é executada na sua própria thread separadamente da thread principal.
 
 2. Não Bloqueante - Non-blocking 
 
-É a capacidade de fazer operações de entrada e saída (acessar sistema de arquivos, banco de dados, rede, servidores, etc.) sem que a aplicação fique impedida de executar outras coisas em paralelo.
+* É a capacidade de fazer operações de entrada e saída (acessar sistema de arquivos, banco de dados, rede, servidores, etc.) sem que a aplicação fique impedida de executar outras coisas em paralelo.
 
 3. Contrapressão - Backpressure
 
-Define como regular a transmissão de elementos de fluxo. Em outras palavras, controle quantos elementos o destinatário pode consumir.
+* Define como regular a transmissão de elementos de fluxo. Em outras palavras, controle quantos elementos o destinatário pode consumir.
 
 <h3>Trabalha com Emissão de Eventos</h3>
 
@@ -29,14 +29,15 @@ Define como regular a transmissão de elementos de fluxo. Em outras palavras, c
 
 <h3>Subscribing to Mono with Consumer and Error</h3>
 
-Mono significa que você tem um objeto ou não tem nada, mono ou void.
+* Mono significa que você tem um objeto ou não tem nada, mono ou void.
 
 <h4>Consumer</h4>
 
-Consumer é possibilidade de executar uma ação no momento da Subscribe.
+* Consumer é possibilidade de executar uma ação no momento da Subscribe.
 
 <h4>Subscribing to Mono with OnMethods</h4>
-doOnSubscribe, doOnRequest, doOnNext, doOnSuccess, doOnError, onErrorResume, e onErrorReturn.
+
+* doOnSubscribe, doOnRequest, doOnNext, doOnSuccess, doOnError, onErrorResume, e onErrorReturn.
 
 <h4>FlatMap and Map</h4>
 
@@ -51,11 +52,11 @@ Vamos dizer que você tenha uma lista de listas, a função map() pegaria as l
 
 <h4>Function</h4>
 
-funções em lambdas
+* funções em lambdas
 
 <h4>Fallback to Errors</h4>
 
-Plano B para resume e return sobre erros
+* Plano B para resume e return sobre erros
 
 
 
