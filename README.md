@@ -1,4 +1,4 @@
-# project-reactor-study
+# Project Reactor Study
 Learning about reactive programming.
 
 # Reactive Streams
