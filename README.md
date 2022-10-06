@@ -41,14 +41,14 @@ Learning about reactive programming.
 
 <h4>FlatMap and Map</h4>
 
-<p>Ambas pegam os elementos de um stream de dados (geralmente uma solução como array ou ArrayList) e cada elemento terá uma ação a ser definida em seguida.</p>
+* Ambas pegam os elementos de um stream de dados (geralmente uma solução como array ou ArrayList) e cada elemento terá uma ação a ser definida em seguida.
 
-<p>A diferença que flatMap() consegue fazer isso em streams que possuem dimensões (ele achata os dados para ficar linear), então cada elementos daquela coleção de dados será usado independente de ele estar aninhado nessa coleção.</p>
+* A diferença que flatMap() consegue fazer isso em streams que possuem dimensões (ele achata os dados para ficar linear), então cada elementos daquela coleção de dados será usado independente de ele estar aninhado nessa coleção.
 
-<p>Quando você tem dados que estão de forma linear nunca é preciso usá-la.
-Vamos dizer que você tenha uma lista de listas, a função map() pegaria as listas internas, mas o que você quer é os elementos dessas listas, então só flatMap() resolve.</p>
+* Quando você tem dados que estão de forma linear nunca é preciso usá-la.
+Vamos dizer que você tenha uma lista de listas, a função map() pegaria as listas internas, mas o que você quer é os elementos dessas listas, então só flatMap() resolve.
 
-<p>Outro exemplo é ter uma lista de strings e você quer os caracteres. Enquanto map() pegara os textos um por um, flatMap() pegaria os caracteres.</p>
+* Outro exemplo é ter uma lista de strings e você quer os caracteres. Enquanto map() pegara os textos um por um, flatMap() pegaria os caracteres.
 
 <h4>Function</h4>
 
