@@ -9,7 +9,7 @@ Trabalhando com Reactive Streams que implementa 4 interfaces e quem está proven
 
 Permite que você continue com a execução do seu programa na thread principal enquanto uma tarefa de longa duração é executada na sua própria thread separadamente da thread principal.
 
-2. Non-blocking - Não Bloqueante
+2. Não Bloqueante - Non-blocking 
 
 É a capacidade de fazer operações de entrada e saída (acessar sistema de arquivos, banco de dados, rede, servidores, etc.) sem que a aplicação fique impedida de executar outras coisas em paralelo.
 
