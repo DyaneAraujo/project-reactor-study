@@ -25,18 +25,20 @@ Define como regular a transmissão de elementos de fluxo. Em outras palavras, c
 
 3. Subscription - É enviado pelo Publisher através do onSubscribe. Ele consegue gerenciar a requisição, informando por exemplo a quantidade de elementos que ele deseja. Ele gerencia o Backpressure
 
-* Subscribing to Mono
-
-Mono significa que você tem um objeto ou não tem nada, mono ou void.
+<hr/>
 
 <h3>Subscribing to Mono with Consumer and Error</h3>
 
+Mono significa que você tem um objeto ou não tem nada, mono ou void.
+
+<h4>Consumer</h4>
+
 Consumer é possibilidade de executar uma ação no momento da Subscribe.
 
-* Subscribing to Mono with OnMethods
+<h4>Subscribing to Mono with OnMethods</h4>
 doOnSubscribe, doOnRequest, doOnNext, doOnSuccess, doOnError, onErrorResume, e onErrorReturn.
 
-* FlatMap and Map
+<h4>FlatMap and Map</h4>
 
 <p>Ambas pegam os elementos de um stream de dados (geralmente uma solução como array ou ArrayList) e cada elemento terá uma ação a ser definida em seguida.</p>
 
@@ -47,11 +49,11 @@ Vamos dizer que você tenha uma lista de listas, a função map() pegaria as l
 
 <p>Outro exemplo é ter uma lista de strings e você quer os caracteres. Enquanto map() pegara os textos um por um, flatMap() pegaria os caracteres.</p>
 
-* Function
+<h4>Function</h4>
 
 funções em lambdas
 
-* Fallback to Errors
+<h4>Fallback to Errors</h4>
 
 Plano B para resume e return sobre erros
 
