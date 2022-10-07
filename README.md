@@ -52,12 +52,22 @@ Vamos dizer que você tenha uma lista de listas, a função map() pegaria as l
 
 <h4>Function</h4>
 
-* funções em lambdas
+* funções em lambdas.
 
 <h4>Fallback to Errors</h4>
 
-* Plano B para resume e return sobre erros
+* Plano B para resume e return sobre erros.
 
+<h4>Flux</h4>
 
+* Flux significa que você tem um objeto ou N objetos, mono ou vários.
+
+<h4>Backpressure</h4>
+
+* Criação de Backpressure por interface ou abstract.
+
+<h4>Interval</h4>
+
+* Intervalos servem para dar agendamentos e ficar publicando algo durante esse agendamento. Para testar pode se utilizar Virtual Time para testar dentro de uma margem de dias. O Interval é rodado em uma Thread paralela a Thread main. 
 
 
