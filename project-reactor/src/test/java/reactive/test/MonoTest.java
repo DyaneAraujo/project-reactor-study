@@ -10,7 +10,7 @@ import reactor.test.StepVerifier;
 public class MonoTest {
 
     @Test
-    public void monoSubscriber(){
+    public void monoSubscriber() {
 
         String name = "Dyane Araújo";
 
@@ -29,7 +29,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumer(){
+    public void monoSubscriberConsumer() {
 
         String name = "Dyane Araújo";
 
@@ -48,7 +48,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumerError(){
+    public void monoSubscriberConsumerError() {
 
         String name = "Dyane Araújo";
 
@@ -68,7 +68,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumerComplete(){
+    public void monoSubscriberConsumerComplete() {
 
         String name = "Dyane Araújo";
 
@@ -90,7 +90,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumerSubscription(){
+    public void monoSubscriberConsumerSubscription() {
 
         String name = "Dyane Araújo";
 
@@ -104,7 +104,7 @@ public class MonoTest {
             Throwable::printStackTrace,
             () -> log.info("FINISHED!"),
             Subscription::cancel); //All Consumer, Subscriber Canceled
-            //Clear Resources
+        //Clear Resources
 
         log.info("-------TEST CONSUMER SUBSCRIPTION-----");
 
@@ -114,7 +114,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoSubscriberConsumerSubscriptionBackpressure(){
+    public void monoSubscriberConsumerSubscriptionBackpressure() {
 
         String name = "Dyane Araújo";
 
@@ -137,7 +137,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoDoOnMethods(){
+    public void monoDoOnMethods() {
 
         String name = "Dyane Araújo";
 
@@ -161,7 +161,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoDoOnError(){
+    public void monoDoOnError() {
 
         //Publisher Mono: 1 or void
         Mono<Object> mono = Mono.error(new IllegalArgumentException("Illegal argument exception"))
@@ -177,7 +177,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoDoOnErrorResume(){
+    public void monoDoOnErrorResume() {
 
         String name = "Dyane Araújo";
 
@@ -198,7 +198,7 @@ public class MonoTest {
     }
 
     @Test
-    public void monoDoOnErrorReturn(){
+    public void monoDoOnErrorReturn() {
 
         //Publisher Mono: 1 or void
         Mono<Object> mono = Mono.error(new IllegalArgumentException("Illegal argument exception"))
