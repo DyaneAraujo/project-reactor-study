@@ -70,4 +70,20 @@ Vamos dizer que você tenha uma lista de listas, a função map() pegaria as l
 
 * Intervalos servem para dar agendamentos e ficar publicando algo durante esse agendamento. Para testar pode se utilizar Virtual Time para testar dentro de uma margem de dias. O Interval é rodado em uma Thread paralela a Thread main. 
 
+<h4>Limit Rate</h4>
+
+* Para limitar as request, parecido com backpressure absctract.
+
+<h4>Hot Publisher e Connectable Flux</h4>
+
+* No momento que você se conecta haverá um evento, sem a necessidade de haver um Subscriber antes.
+
+<h4>AutoConnect</h4>
+
+* O evento só emitido após dois Subscriber por exemplo
+
+<h4>PublishOn and SubscribeOn</h4>
+
+* Operator em execução, em Threads paralelas.
+
 
