@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import reactor.core.publisher.BaseSubscriber;
+import reactor.core.publisher.ConnectableFlux;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
@@ -174,6 +175,24 @@ public class FluxTest {
     }
 
     @Test
+    public void fluxSubscriberConsumerPrettyBackpressure() {
+
+        //Publisher Mono: 1 or N
+        Flux<Integer> flux = Flux.range(1, 10)
+            .log()
+            .limitRate(3);
+
+        //Subscribing
+        flux.subscribe(s -> log.info("Value {}", s)); //with Backpressure
+
+        log.info("-------TEST CONSUMER BACKPRESSURE LIMIT RATE-----");
+
+        StepVerifier.create(flux)
+            .expectNext(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) //onNext
+            .verifyComplete(); //onComplete
+    }
+
+    @Test
     public void fluxSubscriberConsumerInterval() throws Exception {
 
         //Publisher Mono: 1 or N
@@ -188,7 +207,9 @@ public class FluxTest {
     }
 
     @Test
-    public void fluxSubscriberIntervalVirtualTime() {
+    public void fluxSubscriberConsumerIntervalVirtualTime() {
+
+        log.info("-------TEST CONSUMER INTERVAL-----");
 
         //Test with Days Margin
 
@@ -209,4 +230,47 @@ public class FluxTest {
             .log();
     }
 
+    @Test
+    public void connectableFlux() throws Exception {
+
+        //Hot Publisher
+        ConnectableFlux<Integer> connectableFlux = Flux.range(1, 10)
+            .log()
+            .delayElements(Duration.ofMillis(100))
+            .publish();
+
+        //The moment you connect, there will be a Publisher, without a Subscriber
+
+        log.info("-------TEST CONNECTABLE FLUX-----");
+
+        StepVerifier
+            .create(connectableFlux)
+            .then(connectableFlux::connect)
+            .thenConsumeWhile(i -> i <= 5) //Consumer
+            .expectNext(6, 7, 8, 9, 10) //onNext
+            .expectComplete() //onComplete
+            .verify();
+    }
+
+    @Test
+    public void fluxAutoConnect() throws Exception {
+
+        //Publisher Mono: 1 or N
+        Flux<Integer> flux = Flux.range(1, 5)
+            .log()
+            .delayElements(Duration.ofMillis(100))
+            .publish()
+            .autoConnect(2);
+
+        //Emits event after 2 Subscriber
+
+        log.info("-------TEST AUTO CONNECT-----");
+
+        StepVerifier
+            .create(flux)
+            .then(flux::subscribe) //2 Subscriber
+            .expectNext(1, 2, 3, 4, 5) //onNext
+            .expectComplete() //onComplete
+            .verify();
+    }
 }
