@@ -365,7 +365,7 @@ public class OperatorTest {
             .delayElements(Duration.ofMillis(200))
             .log();
 
-        //Ensures sequential merge in parallel thread
+        //ensures sequential merge in parallel thread
 
         log.info("-------TEST MERGE SEQUENTIAL-----");
 
